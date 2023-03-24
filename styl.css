@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image:url(img/night.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.board {
+    height: 85vh;
+    width: 80vw;
+    background-color: black;
+    border-radius: 14px;
+    border: 4px solid cyan;
+    position: relative;
+}
+  
+.ball {
+    height: 30px;
+    width: 30px;
+    background-image: linear-gradient(rgb(244, 238, 238), rgb(64, 64, 63));
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
+.paddle {
+    height: 10px;
+    width: 100px;
+    border-radius: 18%;
+    position: fixed;
+    background-color: white;
+}
+  
+.paddle_1 {
+    top: calc(7.5vh + 30px);
+    left: calc(10vw + 20px);
+    margin-left: 50px;
+}
+.paddle_2 {
+    top: calc(85vh + 7.5vh - 40px);
+    right: calc(10vw + 20px);
+}
+
+.message {
+    position: fixed;
+    height: 10vh;
+    width: 30vw;
+    color: #8c8d90;
+    left: 38vw;
+    margin: 45px auto auto auto;
+}
