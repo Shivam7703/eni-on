@@ -20,13 +20,7 @@ body {
     border: 4px solid cyan;
     position: relative;
 }
-i{
-    color: rgb(201, 224, 230);
-    display: relative;
-    position: fixed;
-    font-size: 35px;
-    bottom: 20%;
-}
+
   
 .ball {
     height: 30px;
@@ -63,4 +57,11 @@ i{
     color: #8c8d90;
     left: 38vw;
     margin: 45px auto auto auto;
+}
+i{
+    color: rgb(201, 224, 230);
+    display: relative;
+    position: fixed;
+    font-size: 35px;
+    bottom: 20%;
 }
