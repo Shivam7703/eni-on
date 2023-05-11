@@ -20,6 +20,13 @@ body {
     border: 4px solid cyan;
     position: relative;
 }
+i{
+    color: rgb(201, 224, 230);
+    display: relative;
+    position: fixed;
+    font-size: 35px;
+    bottom: 20%;
+}
   
 .ball {
     height: 30px;
