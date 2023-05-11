@@ -1,4 +1,6 @@
 let gameState = 'start';
+let left = document.getElementById('left');
+let right = document.getElementById('right');
 let paddle_1 = document.querySelector('.paddle_1');
 let paddle_2 = document.querySelector('.paddle_2');
 let board = document.querySelector('.board');
@@ -18,8 +20,8 @@ let dy = Math.floor(Math.random() * 3) + 2;
 let dxd = Math.floor(Math.random() * 2);
 let dyd = Math.floor(Math.random() * 2);
 
-document.addEventListener('keydown', (e) => {
-    if (e.key == 'Enter') {
+ball.addEventListener('click', () => {
+
         gameState =  'play' ;
 
         if (gameState == 'play') {
@@ -30,26 +32,25 @@ document.addEventListener('keydown', (e) => {
                 dyd = 1;
                 moveBall(dx, dy, dxd, dyd);
         }
-    }
 
     if (gameState == 'play') {
 
         //   paddle user
-        if (e.key == 'ArrowLeft') {
+        left.addEventListener('click', ()=>{
             if(board_coord.left >= paddle_2_coord.left){
                 return;
             }
             paddle_2.style.left = (paddle_2_coord.left - 20) + 'px';
             paddle_2_coord = paddle_2.getBoundingClientRect();
-        }
-        if (e.key == 'ArrowRight') {
+        });
+        right.addEventListener('click', ()=> {
             if(board_coord.right <= paddle_2_coord.right){
                 return;
             }
             paddle_2.style.left = (paddle_2_coord.left + 20) + 'px';
 
             paddle_2_coord = paddle_2.getBoundingClientRect();
-        }
+        })
     }
 });
 
